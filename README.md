@@ -26,29 +26,6 @@ This project consists of two main parts:
 * Option to lock character movement while still allowing orientation changes.
 * Model selection via dropdown or "Next Model" button.
 
-## Directory Structure (Simplified)
-
-/SpriteSheetGenerator
-├── input_models/
-│   └── YourModelName/
-│       ├── Idle.fbx
-│       ├── Walking.fbx
-│       └── YourModelName_material.fbx (or .obj for material) 
-├── output_spritesheets/  # Output of the Python generator
-│   ├── YourModel_Animationtype_spritesheet_angle_rows.png
-│   ├── YourModel_Animationtype_spritesheet_angle_rows.json
-│   └── manifest_spritesheets.json
-├── src/
-│   ├── main_local2.py             # Main orchestration script
-│   └── render_animated_spritesheet.py # Blender rendering script
-├── viewer/                    # Files for the HTML viewer
-│   ├── index.html
-│   ├── style.css
-│   ├── viewer.js
-│   └── assets/
-│       └── spritesheets/      # Spritesheets copied here for viewer
-└── config.ini                 # Main configuration for the generator
-
 ## Prerequisites
 
 * **Python 3.x**
