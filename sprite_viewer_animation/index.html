@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Spritesheet Animation Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Spritesheet Animation Viewer (Movement Toggle)</h1>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="spritesheet-select">Select Model:</label>
+                <select id="spritesheet-select"></select>
+                <button id="nextModelBtn">Next Model</button>
+            </div>
+
+            <div class="control-group">
+                <label for="animation-speed-input">Animation Speed:</label>
+                <input type="range" id="animation-speed-input" min="0.05" max="0.5" step="0.01" value="0.15">
+                <span id="animation-speed-value">0.15</span>
+            </div>
+            <div class="control-group">
+                <label for="movement-speed-input">Movement Speed:</label>
+                <input type="range" id="movement-speed-input" min="0.5" max="5.0" step="0.1" value="2.0">
+                <span id="movement-speed-value">2.0</span>
+            </div>
+            <div class="control-group">
+                <button id="toggleParticlesBtn">Dust Particles: ON</button>
+            </div>
+            <div class="control-group"> <button id="toggleMovementLockBtn">Movement: ACTIVE</button>
+            </div>
+        </div>
+
+        <canvas id="spriteCanvas">Your browser does not support the canvas element.</canvas>
+
+        <div class="info-display">
+            <p>Model: <span id="char-model-name">N/A</span></p>
+            <p>Position: <span id="char-pos">X=0, Y=0</span></p>
+            <p>Orientation: <span id="char-angle-degrees">0°</span> (Angle-Idx: <span id="char-angle-idx">0</span>)</p>
+            <p>Anim.-Frame: <span id="char-anim-frame">0</span></p>
+            <p>Status: <span id="char-status">IDLE</span></p>
+            <p>Movement Locked: <span id="movement-lock-status">NO</span></p> </div>
+
+        <div class="instructions">
+            <p><strong>Controls:</strong></p>
+            <ul>
+                <li><strong>W, A, S, D</strong> or <strong>Arrow Keys:</strong> Move character (if movement active) / Change orientation</li>
+                <li><strong>Mouse over Canvas:</strong> Orient character</li>
+                <li><strong>Next Model:</strong> Switches to the next loaded character</li>
+                <li><strong>Dust Particles ON/OFF:</strong> Toggles dust particles when walking</li>
+                <li><strong>Movement ACTIVE/LOCKED:</strong> Toggles character position changes</li>
+                <li><strong>Animation Speed:</strong> Speed of the walk-cycle animation</li>
+                <li><strong>Movement Speed:</strong> Speed of the character on the canvas</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2c3e50; /* Dunkelblau-Grau */
+    color: #ecf0f1; /* Helles Grau/Weiß */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: #34495e; /* Etwas helleres Blau-Grau */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+h1 {
+    color: #1abc9c; /* Türkis */
+    margin-bottom: 25px;
+    border-bottom: 2px solid #16a085; /* Dunkleres Türkis */
+    padding-bottom: 10px;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Abstand zwischen den Control-Gruppen */
+}
+
+.control-group {
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column; /* Elemente untereinander */
+    align-items: flex-start; /* Beschriftungen linksbündig */
+    gap: 8px; /* Abstand zwischen Label und Select/Button */
+}
+
+.control-group label {
+    font-weight: bold;
+    color: #bdc3c7; /* Helles Grau */
+    margin-bottom: 5px; /* Kleiner Abstand nach unten, falls Element darunter */
+}
+
+select, button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1abc9c; /* Türkis */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+select {
+    background-color: #4a6a85; /* Etwas anderes für Selects */
+    min-width: 180px;
+}
+
+button:hover {
+    background-color: #16a085; /* Dunkleres Türkis */
+}
+
+select:hover {
+    background-color: #5b7c99;
+}
+
+
+#spriteCanvas {
+    border: 3px solid #16a085; /* Dunkleres Türkis */
+    background-color: #ecf0f1; /* Helles Grau für Canvas-Hintergrund, um Sprites besser zu sehen */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(26, 188, 156, 0.3);
+    max-width: 100%; /* Erlaubt Skalierung, wenn nötig */
+    display: block; /* Um margin auto zu zentrieren, falls es nicht schon durch Flexbox geschieht */
+    margin: 0 auto 20px auto; /* Zentriert und gibt Abstand nach unten */
+}
+
+.info-display {
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: inline-block; /* Passt sich dem Inhalt an */
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.info-display p {
+    margin: 8px 0;
+    color: #bdc3c7; /* Helles Grau */
+    font-size: 0.95em;
+}
+
+.info-display span {
+    color: #e67e22; /* Orange für Werte */
+    font-weight: bold;
+}
+
+.instructions {
+    text-align: left;
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    max-width: 600px; /* Lesbare Breite für Anweisungen */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.instructions h3 {
+    color: #1abc9c;
+    margin-top: 0;
+}
+
+.instructions ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+    color: #bdc3c7;
+}
+
+.instructions strong {
+    color: #e67e22;
+}
